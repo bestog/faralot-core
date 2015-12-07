@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".MainActivity"
+  >
+  <group
+    android:id="@+id/grp1"
+    android:checkableBehavior="single"
+    >
+    <item
+      android:id="@+id/drawer_location"
+      android:checked="true"
+      android:icon="@drawable/ic_list"
+      android:title="@string/overview"
+      />
+    <item
+      android:id="@+id/drawer_profile"
+      android:icon="@drawable/ic_user"
+      android:title="@string/my_profile"
+      />
+    <item
+      android:id="@+id/drawer_favorites"
+      android:icon="@drawable/ic_favorites"
+      android:title="@string/my_favorites"
+      />
+    <item
+      android:id="@+id/drawer_visits"
+      android:icon="@drawable/ic_visits"
+      android:title="@string/my_visits"
+      />
+
+  </group>
+  <group android:id="@+id/grp2">
+    <item
+      android:id="@+id/drawer_settings"
+      android:title="@string/settings"
+      />
+    <item
+      android:id="@+id/drawer_logout"
+      android:title="@string/log_out"
+      />
+  </group>
+</menu>
+

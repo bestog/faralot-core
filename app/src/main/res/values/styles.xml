@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="button" parent="android:Widget.Button">
+    <item name="android:padding">10dp</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="button_primary" parent="button">
+    <item name="android:background">@color/app_primary</item>
+    <item name="android:textColor">@color/button_primary_text</item>
+  </style>
+
+  <style name="button_secondary" parent="button">
+    <item name="android:background">@color/app_primary_dark</item>
+    <item name="android:textColor">@color/button_secondary_text</item>
+  </style>
+
+  <style name="button_flat_secondary">
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:textColor">@color/app_primary_dark</item>
+  </style>
+
+  <style name="edittext" parent="android:Widget.EditText">
+    <item name="android:padding">8dp</item>
+    <item name="android:background">@drawable/style_edittext</item>
+  </style>
+
+  <style name="textview" parent="android:Widget.TextView">
+    <item name="android:textColor">@color/default_text</item>
+  </style>
+
+  <style name="toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="android:textColorPrimary">@color/toolbar_text</item>
+    <item name="colorControlNormal">@color/toolbar_icon</item>
+    <item name="selectableItemBackground">@color/toolbar_icon_pressed</item>
+    <item name="actionMenuTextColor">@color/toolbar_icon_visible</item>
+  </style>
+
+  <style name="toolbar_menu" parent="ThemeOverlay.AppCompat.Light">
+  </style>
+
+  <style name="spinner">
+    <item name="android:padding">8dp</item>
+    <item name="android:background">@drawable/style_edittext</item>
+  </style>
+
+  <style name="fab_button">
+    <item name="backgroundTint">@color/app_primary_dark</item>
+  </style>
+
+  <style name="text_profile_light" parent="android:Widget.TextView">
+    <item name="android:textColor">@color/light_text</item>
+    <item name="android:textSize">15sp</item>
+  </style>
+
+  <style name="textview_subheader" parent="android:Widget.TextView">
+    <item name="android:textColor">@color/app_primary</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:paddingBottom">10dp</item>
+    <item name="android:gravity">center_vertical</item>
+  </style>
+
+  <style name="badge_default">
+    <item name="android:background">@drawable/style_badge_default</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:padding">6dp</item>
+  </style>
+
+  <style name="badge_dark">
+    <item name="android:background">@drawable/style_badge_dark</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:padding">6dp</item>
+  </style>
+
+  <style name="text_profile_badge">
+    <item name="android:background">@drawable/style_badge_default</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:paddingTop">4dp</item>
+    <item name="android:paddingBottom">4dp</item>
+    <item name="android:paddingLeft">8dp</item>
+    <item name="android:paddingRight">8dp</item>
+  </style>
+
+  <style name="text_profile_small">
+    <item name="android:textColor">@color/profile_small_text</item>
+    <item name="android:textSize">13sp</item>
+  </style>
+
+  <style name="button_bottom">
+    <item name="android:background">@drawable/style_topbackshadow</item>
+    <item name="android:textColor">@color/app_primary_dark</item>
+  </style>
+
+  <style name="ratingbar">
+    <item name="android:progressDrawable">@drawable/layer_ratingbar</item>
+    <item name="android:minHeight">46dip</item>
+    <item name="android:maxHeight">46dip</item>
+  </style>
+
+  <style name="autocompletion_search" parent="android:Widget.AutoCompleteTextView">
+    <item name="android:background">@drawable/style_autocompletion</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:padding">6dp</item>
+    <item name="android:layout_margin">6dp</item>
+  </style>
+
+  <style name="action_process_button">
+    <item name="android:textSize">18sp</item>
+    <item name="android:textColor">@color/white</item>
+  </style>
+
+  <style name="h3">
+    <item name="android:textColor">@color/text_h3</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:paddingBottom">6dp</item>
+    <item name="android:paddingTop">6dp</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="h1">
+    <item name="android:textColor">@color/text_h1</item>
+    <item name="android:paddingBottom">6dp</item>
+    <item name="android:paddingTop">6dp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">24sp</item>
+  </style>
+
+  <color name="button_text">@color/white</color>
+  <color name="button_primary_text">@color/white</color>
+  <color name="button_secondary_text">@color/white</color>
+  <color name="profile_small_text">#999</color>
+</resources>

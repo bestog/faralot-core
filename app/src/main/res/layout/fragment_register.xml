@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/root"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_margin="@dimen/activity_horizontal_margin"
+  >
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp"
+    android:text="@string/register_info"
+    android:textColor="@color/app_primary_dark"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    />
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:paddingBottom="10dp"
+    android:text="@string/register_info_sub"
+    />
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/layout_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    >
+
+    <EditText
+      android:id="@+id/user"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:drawableEnd="@drawable/ic_edt_user"
+      android:drawableRight="@drawable/ic_edt_user"
+      android:hint="@string/username"
+      android:textColorHint="@color/app_primary_dark"
+      />
+  </android.support.design.widget.TextInputLayout>
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/layout_email"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    >
+
+    <EditText
+      android:id="@+id/email"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:drawableEnd="@drawable/ic_edt_mail"
+      android:drawableRight="@drawable/ic_edt_mail"
+      android:hint="@string/email_address"
+      android:inputType="textWebEmailAddress"
+      android:textColorHint="@color/app_primary_dark"
+      />
+  </android.support.design.widget.TextInputLayout>
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/layout_pwd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    >
+
+    <EditText
+      android:id="@+id/pwd"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:drawableEnd="@drawable/ic_edt_pwd"
+      android:drawableRight="@drawable/ic_edt_pwd"
+      android:hint="@string/password"
+      android:inputType="textPassword"
+      android:textColorHint="@color/app_primary_dark"
+      />
+  </android.support.design.widget.TextInputLayout>
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/layout_repeat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    >
+
+    <EditText
+      android:id="@+id/pwd_repeat"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:drawableEnd="@drawable/ic_edt_repeat"
+      android:drawableRight="@drawable/ic_edt_repeat"
+      android:hint="@string/password_repeat"
+      android:inputType="textPassword"
+      android:textColorHint="@color/app_primary_dark"
+      />
+  </android.support.design.widget.TextInputLayout>
+
+  <com.dd.processbutton.iml.ActionProcessButton
+    android:id="@+id/register"
+    style="@style/action_process_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="@string/register"
+    app:pb_colorComplete="@color/button_process_complete"
+    app:pb_colorError="@color/button_process_error"
+    app:pb_colorNormal="@color/button_process"
+    app:pb_colorPressed="@color/button_process_pressed"
+    app:pb_colorProgress="@color/button_process_progress"
+    app:pb_textComplete="Erfolgreich"
+    app:pb_textError="Fehler"
+    app:pb_textProgress="Läuft ..."
+    />
+
+</LinearLayout>

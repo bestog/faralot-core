@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/window_location_info"
+  >
+
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="345dp"
+    android:layout_height="wrap_content"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    >
+
+    <ImageView
+      android:id="@+id/bubble_image"
+      android:layout_width="1dp"
+      android:layout_height="1dp"
+      android:contentDescription="@string/picture"
+      android:visibility="gone"
+      />
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+      <TextView
+        android:id="@+id/bubble_title"
+        style="@style/h3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+      <TextView
+        android:id="@+id/bubble_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+      <TextView
+        android:id="@+id/bubble_subdescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_redo"
+        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/ic_redo"
+        android:paddingTop="10dp"
+        />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <Button
+    android:id="@+id/bubble_moreinfo"
+    style="@style/button_flat_secondary"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:padding="0dp"
+    android:text="@string/to_location"
+    />
+
+</LinearLayout>

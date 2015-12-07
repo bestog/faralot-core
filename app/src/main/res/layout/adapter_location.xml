@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/root"
+  android:layout_width="match_parent"
+  android:layout_height="80dp"
+  >
+
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+      android:id="@+id/image"
+      android:layout_width="80dp"
+      android:layout_height="match_parent"
+      android:contentDescription="@string/picture"
+      android:src="@drawable/img_picture_empty"
+      />
+
+    <RelativeLayout
+      android:id="@+id/content"
+      android:orientation="vertical"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:padding="5dp"
+      >
+
+      <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+      <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <TextView
+          android:id="@+id/distance"
+          android:layout_width="wrap_content"
+          android:layout_height="20dp"
+          android:drawableLeft="@drawable/ic_redo"
+          android:drawablePadding="5dp"
+          android:drawableStart="@drawable/ic_redo"
+          android:textColor="@color/greyscale500"
+          android:textSize="14sp"
+          />
+
+        <com.faralot.core.lib.RatingBarView
+          android:id="@+id/rating"
+          android:layout_width="match_parent"
+          android:layout_height="20dp"
+          android:gravity="end"
+          app:starCount="5"
+          app:starEmpty="@drawable/rb_star_dark_off"
+          app:starFill="@drawable/rb_star_dark_on"
+          app:starImageSize="20dp"
+          />
+      </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+      android:layout_width="40dp"
+      android:layout_height="match_parent"
+      android:contentDescription="@string/picture"
+      android:src="@drawable/ic_arrow_right_dark"
+      />
+
+  </LinearLayout>
+</android.support.v7.widget.CardView>

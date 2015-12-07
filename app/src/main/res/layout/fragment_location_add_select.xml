@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/root"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:gravity="center_horizontal"
+  >
+
+  <org.osmdroid.views.MapView
+    android:id="@+id/map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    />
+
+  <LinearLayout
+    android:id="@+id/fragment_add_select_panel"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/location_addselect_background"
+    android:gravity="center_horizontal"
+    >
+
+    <RelativeLayout
+      android:id="@+id/fragment_add_select_result"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:layout_margin="10dp"
+      >
+
+      <LinearLayout
+        android:id="@+id/result_layout_latitude"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+          android:id="@+id/fragment_add_select_result_lat_desc"
+          style="@style/h3"
+          android:layout_width="90dp"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical"
+          android:text="@string/latitude"
+          />
+
+        <TextView
+          android:id="@+id/result_lat"
+          style="@style/h1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/app_accent"
+          android:textStyle="bold"
+          />
+
+        <ProgressBar
+          android:id="@+id/progress_latitude"
+          style="?android:attr/progressBarStyleHorizontal"
+          android:layout_width="100dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginLeft="15dp"
+          android:layout_marginStart="15dp"
+          />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/result_layout_longitude"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result_layout_latitude"
+        >
+
+        <TextView
+          style="@style/h3"
+          android:layout_width="90dp"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical"
+          android:text="@string/longitude"
+          />
+
+        <TextView
+          android:id="@+id/result_lon"
+          style="@style/h1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/app_accent"
+          android:textStyle="bold"
+          />
+
+        <ProgressBar
+          android:id="@+id/progress_longitude"
+          style="?android:attr/progressBarStyleHorizontal"
+          android:layout_width="100dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginLeft="15dp"
+          android:layout_marginStart="15dp"
+          />
+      </LinearLayout>
+
+      <ImageButton
+        android:id="@+id/submit"
+        style="@style/button_primary"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:contentDescription="@string/picture"
+        android:src="@drawable/ic_check"
+        android:visibility="gone"
+        />
+    </RelativeLayout>
+
+    <Button
+      android:id="@+id/back"
+      style="@style/button_bottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/remove_coordinates"
+      android:textColor="@color/warning_text"
+      />
+  </LinearLayout>
+</RelativeLayout>

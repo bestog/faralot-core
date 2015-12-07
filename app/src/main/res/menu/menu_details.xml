@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	  xmlns:app="http://schemas.android.com/apk/res-auto"
+	  xmlns:tools="http://schemas.android.com/tools"
+	  tools:context=".MainActivity">
+	<item
+		android:id="@+id/action_favorite"
+		android:icon="@drawable/ic_star_empty"
+		android:orderInCategory="100"
+		android:title="@string/favorite"
+		app:showAsAction="ifRoom"/>
+	<item
+		android:id="@+id/action_visit"
+		android:icon="@drawable/ic_flag"
+		android:orderInCategory="200"
+		android:title="@string/visited"
+		app:showAsAction="ifRoom"/>
+	<item
+		android:id="@+id/action_edit"
+		android:icon="@drawable/ic_edit"
+		android:orderInCategory="200"
+		android:title="@string/edit"
+		app:showAsAction="never"/>
+</menu>

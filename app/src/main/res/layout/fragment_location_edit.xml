@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/root"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="10dp"
+  >
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <android.support.design.widget.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+      <EditText
+        android:id="@+id/name"
+        style="@style/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:textColorHint="@color/app_primary_dark"
+        />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      >
+
+      <EditText
+        android:id="@+id/description"
+        style="@style/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|start"
+        android:hint="@string/description"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="6"
+        android:scrollbars="vertical"
+        android:textColorHint="@color/app_primary_dark"
+        />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+      android:id="@+id/layout_category"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      >
+      <TextView
+        style="@style/h3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/category"
+        />
+
+      <Spinner
+        android:id="@+id/category"
+        style="@style/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/layout_suitable"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      >
+
+      <TextView
+        style="@style/h3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/suitable_age"
+        />
+
+      <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical"
+          android:padding="5dp"
+          android:text="@string/from"
+          />
+
+        <Spinner
+          android:id="@+id/suitable_from"
+          style="@style/spinner"
+          android:layout_width="0dp"
+          android:layout_height="40dp"
+          android:layout_weight="1"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical"
+          android:padding="5dp"
+          android:text="@string/to"
+          />
+
+        <Spinner
+          android:id="@+id/suitable_to"
+          style="@style/spinner"
+          android:layout_width="0dp"
+          android:layout_height="40dp"
+          android:layout_weight="1"
+          />
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/layout_features"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      >
+      <TextView
+        style="@style/h3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/features"
+        />
+
+      <com.faralot.core.lib.MultiSpinner
+        android:id="@+id/features"
+        style="@style/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        />
+    </LinearLayout>
+
+    <TextView
+      style="@style/h3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:text="@string/pictures"
+      />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/only_my_pictures"
+      android:textSize="12sp"
+      android:textStyle="italic"
+      />
+
+    <ListView
+      android:id="@+id/pictures"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+
+    <LinearLayout
+      android:id="@+id/layout_prices"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      >
+      <TextView
+        style="@style/h3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/prices"
+        />
+      <ListView
+        android:id="@+id/prices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+      <Button
+        android:id="@+id/add_prices"
+        style="@style/button_flat_secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_prices"
+        android:textColor="@color/app_primary_dark"
+        android:textSize="13sp"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/layout_opening"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      >
+      <TextView
+        style="@style/h3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/openings"
+        />
+      <ListView
+        android:id="@+id/openings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+      <Button
+        android:id="@+id/add_opening"
+        style="@style/button_flat_secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_opening"
+        android:textColor="@color/app_primary_dark"
+        android:textSize="13sp"
+        />
+    </LinearLayout>
+
+    <TextView
+      style="@style/h3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="10dp"
+      android:text="@string/localize"
+      />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="35dp"
+      >
+
+      <TextView
+        android:id="@+id/locale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+
+    <com.dd.processbutton.iml.ActionProcessButton
+      android:id="@+id/submit"
+      style="@style/action_process_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:text="@string/save"
+      app:pb_colorComplete="@color/button_process_complete"
+      app:pb_colorError="@color/button_process_error"
+      app:pb_colorNormal="@color/button_process"
+      app:pb_colorPressed="@color/button_process_pressed"
+      app:pb_colorProgress="@color/button_process_progress"
+      app:pb_textComplete="Erfolgreich"
+      app:pb_textError="Fehler"
+      app:pb_textProgress="Läuft ..."
+      />
+
+  </LinearLayout>
+</ScrollView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/root"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+
+  <org.osmdroid.views.MapView
+    android:id="@+id/map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    />
+
+  <com.github.jorgecastilloprz.FABProgressCircle
+    android:id="@+id/refresh_progress"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    >
+    <android.support.design.widget.FloatingActionButton
+      android:id="@+id/refresh"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_gps"
+      app:backgroundTint="@color/fab"
+      app:elevation="5dp"
+      app:fabSize="mini"
+      app:rippleColor="@color/fab_pressed"
+      />
+  </com.github.jorgecastilloprz.FABProgressCircle>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+  >
+
+  <LinearLayout
+    android:id="@+id/dialog_location_mapdetail_header"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+      android:id="@+id/dialog_mapdetail_title"
+      style="@style/textview_subheader"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      />
+
+    <com.faralot.core.lib.RatingBarView
+      android:id="@+id/dialog_location_mapdetail_rating"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:starCount="5"
+      app:starEmpty="@drawable/rb_star_dark_off"
+      app:starFill="@drawable/rb_star_dark_on"
+      app:starImageSize="22dp"
+      >
+    </com.faralot.core.lib.RatingBarView>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/dialog_location_mapdetail_content"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/dialog_location_mapdetail_header"
+    >
+
+    <ImageView
+      android:id="@+id/dialog_mapdetail_picture"
+      android:layout_width="90dp"
+      android:layout_height="90dp"
+      android:contentDescription="@string/picture"
+      android:scaleType="centerCrop"
+      android:src="@drawable/img_picture_empty"
+      />
+
+    <TextView
+      android:id="@+id/dialog_mapdetail_description"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginLeft="10dp"
+      android:layout_marginStart="10dp"
+      />
+
+  </LinearLayout>
+
+  <Button
+    android:id="@+id/dialog_mapdetail_todetails"
+    style="@style/button_flat_secondary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:text="@string/to_location"
+    />
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+  >
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/review_dialog_background"
+    android:padding="10dp"
+    >
+
+    <RatingBar
+      android:id="@+id/dialog_review_rate"
+      style="@style/ratingbar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:stepSize="1"
+      />
+
+    <EditText
+      android:id="@+id/dialog_review_text"
+      style="@style/edittext"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="5dp"
+      android:hint="@string/comment_optional"
+      android:lines="2"
+      />
+
+    <com.dd.processbutton.iml.ActionProcessButton
+      android:id="@+id/dialog_review_submit"
+      style="@style/action_process_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/send"
+      app:pb_colorComplete="@color/button_process_complete"
+      app:pb_colorError="@color/button_process_error"
+      app:pb_colorNormal="@color/button_process"
+      app:pb_colorPressed="@color/button_process_pressed"
+      app:pb_colorProgress="@color/button_process_progress"
+      app:pb_textComplete="Erfolgreich"
+      app:pb_textError="Fehler"
+      app:pb_textProgress="Läuft ..."
+      />
+
+  </LinearLayout>
+</ScrollView>

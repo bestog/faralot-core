@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Primaere Textfarbe -->
+    <item name="colorPrimary">@color/app_primary</item>
+    <!-- Primaere dunkle Textfarbe -->
+    <item name="colorPrimaryDark">@color/app_primary_dark</item>
+    <!-- Akzentfarbe -->
+    <item name="colorAccent">@color/app_accent</item>
+    <!-- Textfarbe -->
+    <item name="android:textColor">@color/default_text</item>
+    <!-- Style: Button -->
+    <item name="android:buttonStyle">@style/button</item>
+    <!-- Style: EditText -->
+    <item name="android:editTextStyle">@style/edittext</item>
+    <!-- Style: TextView -->
+    <item name="android:textViewStyle">@style/textview</item>
+    <!-- No Anmiation -->
+    <item name="android:windowAnimationStyle">@null</item>
+  </style>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+  >
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/layout_latitude"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    >
+
+    <EditText
+      android:id="@+id/latitude"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/latitude"
+      android:textColorHint="@color/app_primary_dark"
+      />
+  </android.support.design.widget.TextInputLayout>
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/layout_longitude"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    >
+
+    <EditText
+      android:id="@+id/longitude"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/longitude"
+      android:textColorHint="@color/app_primary_dark"
+      />
+  </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>

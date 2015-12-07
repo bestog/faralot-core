@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/root"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingBottom="20dp"
+  android:paddingLeft="40dp"
+  android:paddingRight="40dp"
+  android:paddingTop="40dp"
+  >
+
+  <ImageView
+    android:id="@+id/start_logo"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_centerHorizontal="true"
+    android:contentDescription="@string/picture"
+    android:src="@drawable/app_logo"
+    />
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/login_name_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/start_logo"
+    android:layout_marginTop="30dp"
+    >
+
+    <EditText
+      android:id="@+id/login_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:drawableEnd="@drawable/ic_edt_user"
+      android:drawableRight="@drawable/ic_edt_user"
+      android:hint="@string/username"
+      android:textColorHighlight="@color/app_primary"
+      android:textColorHint="@color/app_primary_dark"
+      />
+  </android.support.design.widget.TextInputLayout>
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/login_pwd_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/login_name_layout"
+    android:layout_marginTop="10dp"
+    >
+
+    <EditText
+      android:id="@+id/login_pwd"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:drawableEnd="@drawable/ic_edt_pwd"
+      android:drawableRight="@drawable/ic_edt_pwd"
+      android:hint="@string/password"
+      android:inputType="textPassword"
+      android:textColorHint="@color/app_primary_dark"
+      />
+  </android.support.design.widget.TextInputLayout>
+
+  <TextView
+    android:id="@+id/login_error"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/login_pwd_layout"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:textColor="@color/warning_text"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    />
+
+  <com.dd.processbutton.iml.ActionProcessButton
+    android:id="@+id/login_button"
+    style="@style/action_process_button"
+    pb_colorComplete="@color/button_process_complete"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/login_error"
+    android:layout_marginBottom="16dp"
+    android:text="@string/log_in"
+    app:pb_colorError="@color/button_process_error"
+    app:pb_colorNormal="@color/button_process"
+    app:pb_colorPressed="@color/button_process_pressed"
+    app:pb_colorProgress="@color/button_process_progress"
+    app:pb_textComplete="Erfolgreich"
+    app:pb_textError="Fehler"
+    app:pb_textProgress="Einloggen läuft..."
+    />
+
+  <TextView
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/login_toregister"
+    android:gravity="center_horizontal"
+    android:text="@string/question_register"
+    />
+
+  <Button
+    android:id="@+id/login_toregister"
+    style="@style/button_flat_secondary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:text="@string/register"
+    />
+</RelativeLayout>

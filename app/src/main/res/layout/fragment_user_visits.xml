@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/root"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+  >
+
+  <TextView
+    android:id="@+id/visits_no_result"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/no_results_found"
+    android:visibility="gone"
+    />
+
+  <com.baoyz.widget.PullRefreshLayout
+    android:id="@+id/visits_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:refreshType="smartisan"
+    >
+
+    <ListView
+      android:id="@+id/visits_list"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+
+  </com.baoyz.widget.PullRefreshLayout>
+
+</RelativeLayout>

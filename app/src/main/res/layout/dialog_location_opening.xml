@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="400dp"
+  >
+
+  <Spinner
+    android:id="@+id/day"
+    style="@style/spinner"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    />
+
+  <TextView
+    style="@style/h3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="@string/timescope"
+    />
+
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <Spinner
+      android:id="@+id/start"
+      style="@style/spinner"
+      android:layout_width="0dp"
+      android:layout_height="40dp"
+      android:layout_weight="1"
+      />
+
+    <Spinner
+      android:id="@+id/end"
+      style="@style/spinner"
+      android:layout_width="0dp"
+      android:layout_height="40dp"
+      android:layout_weight="1"
+      />
+
+  </LinearLayout>
+
+  <com.dd.processbutton.iml.ActionProcessButton
+    android:id="@+id/submit"
+    style="@style/action_process_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="@string/add"
+    app:pb_colorComplete="@color/button_process_complete"
+    app:pb_colorError="@color/button_process_error"
+    app:pb_colorNormal="@color/button_process"
+    app:pb_colorPressed="@color/button_process_pressed"
+    app:pb_colorProgress="@color/button_process_progress"
+    />
+
+</LinearLayout>

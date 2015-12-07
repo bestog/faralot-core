@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+  >
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      >
+
+      <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/pictures"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/greyscale900"
+        />
+
+      <ImageButton
+        android:id="@+id/add_picture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/button_location_upload_background"
+        android:contentDescription="@string/picture"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_add_picture"
+        />
+
+    </RelativeLayout>
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      >
+
+      <TextView
+        android:id="@+id/name"
+        style="@style/h1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+      <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        />
+
+      <TextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="13sp"
+        android:visibility="gone"
+        />
+
+      <TextView
+        android:id="@+id/suitable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="13sp"
+        android:visibility="gone"
+        />
+
+      <LinearLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/style_border_bottom_top"
+        android:paddingEnd="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="0dp"
+        android:paddingStart="10dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+          android:id="@+id/stars_count"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center_vertical"
+          />
+
+        <TextView
+          android:id="@+id/stars"
+          android:layout_width="30dp"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical"
+          android:textSize="19sp"
+          android:textStyle="bold"
+          />
+
+        <ImageView
+          android:layout_width="40dp"
+          android:layout_height="match_parent"
+          android:contentDescription="@string/picture"
+          android:src="@drawable/ic_arrow_right_dark"
+          />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/visits_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/style_border_bottom_top"
+        android:paddingEnd="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="0dp"
+        android:paddingStart="10dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+          android:id="@+id/visits"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center_vertical"
+          />
+
+        <ImageView
+          android:layout_width="40dp"
+          android:layout_height="match_parent"
+          android:contentDescription="@string/picture"
+          android:src="@drawable/ic_arrow_right_dark"
+          />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/features_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/style_border_top"
+        android:paddingBottom="15dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+          style="@style/h3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/features"
+          />
+
+        <TextView
+          android:id="@+id/features_list"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/prices_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_border_top"
+        android:paddingBottom="15dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+          style="@style/h3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/prices"
+          />
+
+        <ListView
+          android:id="@+id/prices_list"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:scrollbars="none"
+          />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/opening_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_border_top"
+        android:paddingBottom="15dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+          style="@style/h3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/openings"
+          />
+
+        <ListView
+          android:id="@+id/opening_list"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:scrollbars="none"
+          />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/address_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_border_top"
+        android:paddingBottom="10dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        >
+
+        <TextView
+          style="@style/h3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/address"
+          />
+
+        <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+
+          android:layout_height="wrap_content"
+          >
+
+          <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <TextView
+              android:id="@+id/address"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              />
+
+            <TextView
+              android:id="@+id/coordinates"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              />
+          </LinearLayout>
+
+          <ImageView
+            android:id="@+id/to_google"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/picture"
+            android:src="@drawable/ic_route"
+            />
+
+        </LinearLayout>
+
+        <org.osmdroid.views.MapView
+          android:id="@+id/map"
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:layout_marginTop="5dp"
+          />
+
+      </LinearLayout>
+    </LinearLayout>
+
+    <Button
+      android:id="@+id/fragment_detail_location_report"
+      style="@style/button_bottom"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:layout_marginTop="20dp"
+      android:text="@string/report_location"
+      />
+  </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/root"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+  >
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    >
+
+    <android.support.design.widget.TextInputLayout
+      android:id="@+id/layout_user"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+      <EditText
+        android:id="@+id/edit_profile_username"
+        style="@style/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:textColorHint="@color/app_primary_dark"
+        />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+      android:id="@+id/layout_first"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      >
+
+      <EditText
+        android:id="@+id/edit_profile_firstname"
+        style="@style/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/firstname"
+        android:textColorHint="@color/app_primary_dark"
+        />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+      android:id="@+id/layout_last"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      >
+
+      <EditText
+        android:id="@+id/edit_profile_lastname"
+        style="@style/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/lastname"
+        android:textColorHint="@color/app_primary_dark"
+        />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+      android:id="@+id/layout_email"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      >
+
+      <EditText
+        android:id="@+id/edit_profile_email"
+        style="@style/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_address"
+        android:inputType="textWebEmailAddress"
+        android:textColorHint="@color/app_primary_dark"
+        />
+    </android.support.design.widget.TextInputLayout>
+
+    <com.dd.processbutton.iml.ActionProcessButton
+      android:id="@+id/submit"
+      style="@style/action_process_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:text="@string/save"
+      app:pb_colorComplete="@color/button_process_complete"
+      app:pb_colorError="@color/button_process_error"
+      app:pb_colorNormal="@color/button_process"
+      app:pb_colorPressed="@color/button_process_pressed"
+      app:pb_colorProgress="@color/button_process_progress"
+      app:pb_textComplete="Erfolgreich"
+      app:pb_textError="Fehler"
+      app:pb_textProgress="Wird gespeichert ..."
+      />
+
+    <Button
+      android:id="@+id/change_password"
+      style="@style/button_secondary"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:text="@string/change_password"
+      />
+  </LinearLayout>
+
+  <Button
+    android:id="@+id/delete_account"
+    style="@style/button_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_alignParentBottom="true"
+    android:text="@string/delete_account"
+    android:textColor="@color/warning_text"
+    />
+
+</RelativeLayout>

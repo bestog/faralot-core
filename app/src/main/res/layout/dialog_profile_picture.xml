@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/dialog_profile_picture_image"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/greyscale100"
+  >
+
+  <com.isseiaoki.simplecropview.CropImageView
+    android:id="@+id/cropimage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="60dp"
+    android:scaleType="centerInside"
+    app:cropMode="ratio_1_1"
+    />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/greyscale500"
+    android:gravity="center_horizontal"
+    android:padding="10dp"
+    >
+
+    <ImageButton
+      android:id="@+id/rotate"
+      style="@style/button_primary"
+      android:layout_width="wrap_content"
+      android:layout_height="40dp"
+      android:layout_marginEnd="20dp"
+      android:layout_marginRight="20dp"
+      android:contentDescription="@string/picture"
+      android:padding="5dp"
+      android:src="@drawable/ic_rotate_right"
+      />
+
+    <com.dd.processbutton.iml.ActionProcessButton
+      android:id="@+id/submit"
+      style="@style/action_process_button"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:text="@string/upload"
+      app:pb_colorComplete="@color/button_process_complete"
+      app:pb_colorError="@color/button_process_error"
+      app:pb_colorNormal="@color/button_process"
+      app:pb_colorPressed="@color/button_process_pressed"
+      app:pb_colorProgress="@color/button_process_progress"
+      app:pb_textComplete="Erfolgreich"
+      app:pb_textError="Fehler"
+      app:pb_textProgress="Läuft ..."
+      />
+
+  </LinearLayout>
+
+</RelativeLayout>
+
+
+

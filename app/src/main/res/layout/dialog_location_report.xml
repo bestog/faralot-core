@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="10dp"
+  >
+
+  <EditText
+    android:id="@+id/dialog_report_text"
+    style="@style/edittext"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:gravity="top|start"
+    android:hint="@string/report_question"
+    android:lines="3"
+    />
+
+  <com.dd.processbutton.iml.ActionProcessButton
+    android:id="@+id/dialog_report_submit"
+    style="@style/action_process_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:text="@string/send"
+    app:pb_colorComplete="@color/button_process_complete"
+    app:pb_colorError="@color/button_process_error"
+    app:pb_colorNormal="@color/button_process"
+    app:pb_colorPressed="@color/button_process_pressed"
+    app:pb_colorProgress="@color/button_process_progress"
+    app:pb_textComplete="Erfolgreich"
+    app:pb_textError="Fehler"
+    app:pb_textProgress="Läuft ..."
+    />
+
+</LinearLayout>

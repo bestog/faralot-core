@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <PreferenceCategory
+    android:title="@string/settings">
+
+    <ListPreference
+      android:defaultValue="@string/gps"
+      android:entries="@array/localization_systems"
+      android:entryValues="@array/localization_systems"
+      android:key="localization"
+      android:summary="@string/preference_choose_ls"
+      android:title="@string/localize"
+      />
+
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="API">
+
+    <Preference
+      android:key="refresh_token"
+      android:summary="@string/preference_refresh_token"
+      android:title="@string/refresh_token"
+      />
+
+  </PreferenceCategory>
+
+</PreferenceScreen>

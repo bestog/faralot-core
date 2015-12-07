@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baoyz.widget.PullRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/root"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:refreshType="smartisan"
+  >
+
+  <RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+      android:id="@+id/fragment_profile_header"
+      android:layout_width="match_parent"
+      android:layout_height="130dp"
+      android:background="@color/app_primary_dark"
+      >
+
+      <RelativeLayout
+        android:id="@+id/fragment_profile_header_left"
+        android:orientation="vertical"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+          android:id="@+id/profile_picture"
+          android:layout_width="match_parent"
+          android:layout_height="110dp"
+          android:layout_margin="5dp"
+          android:src="@drawable/img_no_picture_white"
+          app:civ_border_color="@color/app_accent"
+          app:civ_border_width="1dp"
+          />
+
+        <ImageView
+          android:id="@+id/profile_upload"
+          style="@style/badge_default"
+          android:layout_width="35dp"
+          android:layout_height="35dp"
+          android:layout_alignParentBottom="true"
+          android:layout_marginBottom="10dp"
+          android:layout_marginLeft="5dp"
+          android:layout_marginStart="5dp"
+          android:contentDescription="@string/picture"
+          android:padding="4dp"
+          android:src="@drawable/ic_upload"
+          />
+      </RelativeLayout>
+
+      <LinearLayout
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/fragment_profile_header_left"
+        android:layout_toRightOf="@id/fragment_profile_header_left"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+          android:id="@+id/profile_username"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="5dp"
+          android:textColor="@color/profile_username_text"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          />
+
+        <TextView
+          android:id="@+id/profile_name"
+          style="@style/text_profile_light"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+        <TextView
+          android:id="@+id/profile_email"
+          style="@style/text_profile_light"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+        <TextView
+          android:id="@+id/profile_register"
+          style="@style/text_profile_light"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+      </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/fragment_profile_header"
+      android:background="@color/profile_list_background"
+      >
+
+      <android.support.v7.widget.CardView
+        android:id="@+id/profile_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+          <ImageView
+            android:id="@+id/fragment_profile_favorite_picture"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="15dp"
+            android:contentDescription="@string/picture"
+            android:src="@drawable/ic_favorite_dark"
+            />
+
+          <TextView
+            android:id="@+id/fragment_profile_favorite_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/fragment_profile_favorite_picture"
+            android:layout_toRightOf="@id/fragment_profile_favorite_picture"
+            android:gravity="center_vertical"
+            android:text="@string/my_favorites"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+          <TextView
+            android:id="@+id/profile_favorite_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:drawableEnd="@drawable/ic_arrow_right_dark"
+            android:drawableRight="@drawable/ic_arrow_right_dark"
+            android:gravity="center_vertical"
+            android:text="@string/default_value"
+            android:textSize="19sp"
+            />
+
+        </RelativeLayout>
+      </android.support.v7.widget.CardView>
+
+      <android.support.v7.widget.CardView
+        android:id="@+id/profile_visit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        >
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+          <ImageView
+            android:id="@+id/fragment_profile_visit_picture"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="15dp"
+            android:contentDescription="@string/picture"
+            android:src="@drawable/ic_marker_dark"
+            />
+
+          <TextView
+            android:id="@+id/fragment_profile_visit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/fragment_profile_visit_picture"
+            android:layout_toRightOf="@id/fragment_profile_visit_picture"
+            android:gravity="center_vertical"
+            android:text="@string/my_visits"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+          <TextView
+            android:id="@+id/profile_visit_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:drawableEnd="@drawable/ic_arrow_right_dark"
+            android:drawableRight="@drawable/ic_arrow_right_dark"
+            android:gravity="center_vertical"
+            android:text="@string/default_value"
+            android:textSize="19sp"
+            />
+        </RelativeLayout>
+      </android.support.v7.widget.CardView>
+
+      <android.support.v7.widget.CardView
+        android:id="@+id/profile_point"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        >
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+          <ImageView
+            android:id="@+id/fragment_profile_point_picture"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="15dp"
+            android:contentDescription="@string/picture"
+            android:src="@drawable/ic_diamond_dark"
+            />
+
+          <TextView
+            android:id="@+id/fragment_profile_point_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/fragment_profile_point_picture"
+            android:layout_toRightOf="@id/fragment_profile_point_picture"
+            android:gravity="center_vertical"
+            android:text="@string/my_points"
+            android:textColor="@color/text_muted"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+          <TextView
+            android:id="@+id/profile_point_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:drawableEnd="@drawable/ic_arrow_right_dark"
+            android:drawableRight="@drawable/ic_arrow_right_dark"
+            android:gravity="center_vertical"
+            android:text="@string/default_value"
+            android:textColor="@color/text_muted"
+            android:textSize="19sp"
+            />
+        </RelativeLayout>
+      </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <Button
+      android:id="@+id/profile_edit"
+      style="@style/button_bottom"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:layout_alignParentBottom="true"
+      android:text="@string/edit_profile"
+      />
+
+  </RelativeLayout>
+
+</com.baoyz.widget.PullRefreshLayout>
