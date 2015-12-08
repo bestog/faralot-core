@@ -19,9 +19,9 @@ Library:
 
 *.aar* Datei unter `/app/build/outputs/arr`
 
-Um eine eigenständige Geolocation-Plattform für Android zu entwickeln,
+Um eine eigenständige Geolocation-Plattform für Android zu entwickeln, wird das GitHub-Projekt [faralot-app](https://github.com/bestog/faralot-app) benötigt.
 
-wird das GitHub-Projekt [faralot-app](https://github.com/bestog/faralot-app) benötigt.
+*Getestet mit Android Version 4.4.2 (KitKat) / Motorola Razr i - XT890*
 
 Weitere Details sind unter [faralot.com / faralot.de](https://faralot.com) zu finden.
 ### License
