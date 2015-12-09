@@ -23,6 +23,8 @@ Um eine eigenständige Geolocation-Plattform für Android zu entwickeln, wird da
 
 *Getestet mit Android Version 4.4.2 (KitKat) / Motorola Razr i - XT890*
 
+*Unterstützt API Level 14 und höher.*
+
 Weitere Details sind unter [faralot.com / faralot.de](https://faralot.com) zu finden.
 ### License
 The components inside this GitHub project are under LGPL v3 licence, with an important simplification: 
